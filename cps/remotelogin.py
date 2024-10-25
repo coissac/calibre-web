@@ -83,10 +83,8 @@ def remote_login():
         qrcode_url = ""
     log.debug("Remot Login request with token: %s", auth_token.auth_token)
     return render_title_template('remote_login.html', title=_("Login"), token=auth_token.auth_token,
-                                 verify_url=verify_url, 
-                                 qrcode=has_qrcode, qrcode_url = qrcode_url,  
-                                 page="remotelogin")
-    
+                                 verify_url=verify_url, page="remotelogin")
+
 
 @remotelogin.route('/verify/<token>')
 @remote_login_required
