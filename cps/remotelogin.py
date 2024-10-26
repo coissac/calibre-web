@@ -36,6 +36,7 @@ from .usermanagement import user_login_required
 try:
     import qrcode
     from base64 import b64encode
+    from base64 import b64encode
     from io import BytesIO
     from flask import send_file
     has_qrcode = True
