@@ -78,7 +78,7 @@ def remote_login():
         img = qr.make_image()
         img_buf = BytesIO()
         img.save(img_buf,format = 'jpeg')
-        qrcode_url = "data:image/png;base64, %s" % base64.b64encode(stream.getvalue()).decode()
+        qrcode_url = "data:image/jpeg;base64, %s" % base64.b64encode(stream.getvalue()).decode()
     else:
         qrcode_url = ""
     log.debug("Remot Login request with token: %s", auth_token.auth_token)
